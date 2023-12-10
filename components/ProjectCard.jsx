@@ -6,8 +6,33 @@ import { Badge } from "./ui/badge";
 
 const ProjectCard = ({ project }) => {
 	return (
-		<Card>
-			<CardHeader>Card Header</CardHeader>
+		<Card className="group overflow-hidden relative">
+			<CardHeader className="p-0">
+				<div className="relative w-full h-[300px] flex items-center justify-center bg-[#f2edf2] dark:bg-secondary/40 xl:bg-work_project_bg_light xl:bg-[110%] dark:xl:bg-work_project_bg_dark xl:bg-no-repeat overflow-hidden">
+					<Image
+						className="absolute bottom-0 shadow-2xl"
+						src={project.image}
+						width={247}
+						height={250}
+						alt=""
+						priority
+					/>
+					<div className="flex gap-x-4">
+						<Link
+							href={project.link}
+							className="bg-purple-950 w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200"
+						>
+							<Link2Icon className="text-white" />
+						</Link>
+						<Link
+							href={project.github}
+							className="bg-purple-950 w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200"
+						>
+							<Github className="text-white" />
+						</Link>
+					</div>
+				</div>
+			</CardHeader>
 			<div className="h-full px-8 py-6">
 				<Badge className="uppercase text-sm font-medium mb-2 absolute top-4 left-5">
 					{project.category}
