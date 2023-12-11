@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import useScrollProgress from "@/hooks/useScrollProgress";
+import { motion } from 'framer-motion';
+import useScrollProgress from '@/hooks/useScrollProgress';
 
 const variants = {
 	hidden: { opactity: 0 },
@@ -17,7 +17,7 @@ export const Template = ({ children }) => {
 				variants={variants}
 				initial="hidden"
 				animate="enter"
-				transition={{ type: "linear", delay: 0.2, duration: 0.4 }}
+				transition={{ type: 'linear', delay: 0.2, duration: 0.4 }}
 			>
 				{children}
 			</motion.main>

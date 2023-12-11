@@ -1,14 +1,14 @@
-import { Outfit } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { Outfit } from 'next/font/google';
+import './globals.css';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { ThemeProvider } from '@/components/ThemeProvider';
 
-const outfit = Outfit({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ['latin'] });
 
 export const metadata = {
-	title: "Sample Portfolio Website",
-	description: "Based on YouTube video",
+	title: 'Sample Portfolio Website',
+	description: 'Based on YouTube video',
 };
 
 export default function RootLayout({ children }) {
